@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่าง Z-Index 5 รูป</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        /* กล่องคอนเทนเนอร์หลัก ต้องมี position เป็น relative เพื่อให้ลูกๆ อิงตำแหน่งได้ */
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            /* สร้างกรอบให้เห็นพื้นที่ */
+            border: 2px dashed #ccc; 
+            background-color: white;
+        }
+
+        /* สไตล์พื้นฐานของรูปภาพ (ใช้ div แทนรูปเพื่อให้เห็นตัวเลขชัดเจน) */
+        .image-card {
+            position: absolute; /* สำคัญมาก! ต้องมี position จึงจะใช้ z-index ได้ */
+            width: 120px;
+            height: 160px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            border: 2px solid white;
+        }
+
+        /* กำหนดสีและ z-index ของแต่ละรูป */
+        
+        /* รูปที่ 1: อยู่ล่างสุด */
+        .img-1 {
+            background-color: #e74c3c; /* สีแดง */
+            z-index: 1;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* รูปที่ 2 */
+        .img-2 {
+            background-color: #e67e22; /* สีส้ม */
+            z-index: 2;
+            top: 40px;
+            left: 60px;
+        }
+
+        /* รูปที่ 3 */
+        .img-3 {
+            background-color: #f1c40f; /* สีเหลือง */
+            color: #333; /* เปลี่ยนสีตัวอักษรให้อ่านง่าย */
+            z-index: 3;
+            top: 60px;
+            left: 100px;
+        }
+
+        /* รูปที่ 4 */
+        .img-4 {
+            background-color: #2ecc71; /* สีเขียว */
+            z-index: 4;
+            top: 80px;
+            left: 140px;
+        }
+
+        /* รูปที่ 5: อยู่บนสุด เพราะเลขเยอะสุด */
+        .img-5 {
+            background-color: #3498db; /* สีฟ้า */
+            z-index: 5;
+            top: 100px;
+            left: 180px;
+        }
+
+        /* ลูกเล่น: เมื่อเอาเมาส์ชี้ ให้รูปนั้นเด้งมาอยู่หน้าสุด */
+        .image-card:hover {
+            z-index: 10; /* แซงทุกอันที่มีค่า 1-5 */
+            transform: scale(1.1); /* ขยายใหญ่ขึ้นนิดนึง */
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-card img-1">รูปที่ 1<br>(z-index:1)</div>
+        <div class="image-card img-2">รูปที่ 2<br>(z-index:2)</div>
+        <div class="image-card img-3">รูปที่ 3<br>(z-index:3)</div>
+        <div class="image-card img-4">รูปที่ 4<br>(z-index:4)</div>
+        <div class="image-card img-5">รูปที่ 5<br>(z-index:5)</div>
+    </div>
+
+</body>
+</html>
