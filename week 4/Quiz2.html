@@ -1,190 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-  </head>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Single Page Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS เพิ่มเติม */
+        html {
+            scroll-behavior: smooth; /* ทำให้เลื่อนนุ่มนวล */
+        }
+        section {
+            padding: 80px 0; /* ระยะห่างแต่ละ section */
+        }
+        .hero-section {
+            height: 100vh; /* ความสูงเต็มจอ */
+            background-color: #f8f9fa; /* สีพื้นหลังสมมติ (ใส่รูปจริงทีหลัง) */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
 
-  <body>
-    <h1></h1>
-
-    <div class="container">
-      <form>
-        <div class="row">
-          <div class="col-lg-6">
-            
-              <label for="exampleFormControlInput1" class="form-label">
-                คณะ
-              </label>
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                id="exampleSelect"
-              >
-                <option selected>เลือกคณะ</option>
-                <option value="1">คณะวิทยาศาสตร์และเทคโนโลยี</option>
-                <option value="2">คณะมนุษยศาสตร์</option>
-                <option value="3">คณะสังคมศาสาตร์</option>
-              </select>
-              </div> </div>
-
-        <div class="row">
-          <div class="col-lg-2">
-            
-              <label for="exampleSelect" class="form-label"> สัญชาติ </label>
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                id="exampleSelect"
-              >
-                <option selected>เลือกสัญชาติ</option>
-                <option value="1">ไทย</option>
-                <option value="2">ลาว</option>
-                <option value="3">อื่นๆ</option>
-              </select>
-            
-          </div>
-          <div class="col-lg-2">
-          
-              <label for="exampleSelect" class="form-label"> เพศ </label>
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                id="exampleSelect"
-              >
-                <option selected>เลือกเพศ</option>
-                <option value="1">ชาย</option>
-                <option value="2">หญิง</option>
-                
-              </select>
-            
-        </div>
-        <div class="row">
-    <div class="col-lg-2">
-        <label for="exampleSelect" class="form-label"> คำนำหน้าชื่อ </label>
-        <input type="text" class="form-control" placeholder="" aria-label="First name">
-    </div>
-    <div class="col-lg-2">
-        <label for="exampleSelect" class="form-label"> ชื่อ </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-    <div class="col-lg-2">
-        <label for="exampleSelect" class="form-label"> นามสกุล </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-    <div class="col-lg-2">
-        <label for="exampleSelect" class="form-label"> บัตรประชาชน </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-    <div class="col-lg-2">
-        <label for="exampleSelect" class="form-label"> เบอร์ </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-</div>
- <div class="row">
-    <div class="col-lg-3">
-        <label for="exampleSelect" class="form-label"> id line </label>
-        <input type="text" class="form-control" placeholder="" aria-label="First name">
-    </div>
-    <div class="col-lg-3">
-        <label for="exampleSelect" class="form-label"> fb </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-    <div class="col-lg-3">
-        <label for="exampleSelect" class="form-label"> อีแมว </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-
-</div>
-<div class="row">
-    <div class="col-lg-3">
-         <label for="exampleSelect" class="form-label"> วุฒิ </label>
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                id="exampleSelect"
-              >
-                <option selected>เลือกวุฒิ</option>
-                <option value="1">ม.6</option>
-                <option value="2">ปวศ</option>
-                
-              </select>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MY LOGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#service">บริการ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">ติดต่อ</a></li>
+                </ul>
             </div>
-    <div class="col-lg-6">
-        <label for="exampleSelect" class="form-label"> ชื่อสถานศึกษาเดิม </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-    <div class="col-lg-3">
-        <label for="exampleSelect" class="form-label"> จ </label>
-        <select
-                class="form-select"
-                aria-label="Default select example"
-                id="exampleSelect"
-              >
-                <option selected>เลือกจ</option>
-                <option value="1">กทม</option>
-                <option value="2">พล</option>
-                <option value="2">อุบล</option>
-                
-              </select>
-    </div>
-<div class="row">
-    <div class="col-lg-2">
-        <label for="exampleSelect" class="form-label"> วิชาที่เรียนจบ </label>
-        <input type="text" class="form-control" placeholder="" aria-label="First name">
-    </div>
-    <div class="col-lg-2">
-        <label for="exampleSelect" class="form-label"> เกรดเฉลี่ย </label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last name">
-    </div>
-    
-</div>
-</div>
- <div class="row">
-          <div class="col-lg-6">
-            
-              <label for="exampleFormControlInput1" class="form-label">
-                กู้
-              </label>
-              <select
-                class="form-select"
-                aria-label="Default select example"
-                id="exampleSelect"
-              >
-                <option selected>เลือกกู้</option>
-                <option value="1">กู้</option>
-                <option value="2">ไม่กู้</option>
-                
-              </select>
-              </div> </div>
- <div class="row">
-    <div class="col-lg-4">
-    <label for="formFileSm" class="form-label">เอกสารแบบ</label>
-    <input class="form-control form-control-sm" id="formFileSm" type="file">
-</div>
+        </div>
+    </nav>
 
- </div>
- <div class="row">
-    <div class="col-lg-5">   </div>
-    <div class="col-lg-5">
- <button type="submit" class="btn btn-success">ตกลง</button>
- <button type="submit" class="btn btn-danger">ยกเลิก</button></div>
-</div>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to Our Service</h1>
+            <p class="lead">เราพร้อมมอบประสบการณ์ที่ดีที่สุดให้กับคุณ</p>
+            <a href="#about" class="btn btn-primary btn-lg mt-3">เรียนรู้เพิ่มเติม</a>
+        </div>
+    </section>
 
-      </form>
-    </div>
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/600x400" alt="About Us" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>เกี่ยวกับเรา</h2>
+                    <p>ใส่เนื้อหาบรรยายแบรนด์ของคุณที่นี่...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <section id="service" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">บริการของเรา</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center p-4">
+                        <div class="card-body">
+                            <h4>Web Design</h4>
+                            <p>รายละเอียดบริการ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center p-4">
+                        <div class="card-body">
+                            <h4>Graphic Design</h4>
+                            <p>รายละเอียดบริการ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center p-4">
+                        <div class="card-body">
+                            <h4>Marketing</h4>
+                            <p>รายละเอียดบริการ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial">
+        <div class="container text-center">
+            <h2 class="mb-5">เสียงจากลูกค้า</h2>
+            <blockquote class="blockquote">
+                <p class="mb-4">"บริการยอดเยี่ยมมาก ทำงานรวดเร็วและเป็นมืออาชีพ"</p>
+                <footer class="blockquote-footer">สมชาย ใจดี, <cite title="Source Title">CEO บริษัท ABC</cite></footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>ติดต่อเรา</h2>
+                    <p>เบอร์โทร: 02-xxx-xxxx</p>
+                    <p>อีเมล: contact@example.com</p>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label>ชื่อของคุณ</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label>ข้อความ</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3 bg-black text-center text-white">
+        <div class="container">
+            <small>&copy; 2026 My Website. All Rights Reserved. | Privacy Policy</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
