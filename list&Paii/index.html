@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CS VRU - Computer Science</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      /* --- การตั้งค่าฟอนต์ --- */
+      body,
+      p,
+      span,
+      li,
+      a,
+      div,
+      td,
+      .lead {
+        font-family: "Sarabun", sans-serif !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5,
+      .h6,
+      .navbar-brand,
+      .nav-link,
+      .btn,
+      th,
+      td,
+      label,
+      legend,
+      .page-section-heading,
+      .text-uppercase {
+        font-family: "Kanit", sans-serif !important;
+        font-weight: 500 !important;
+      }
+
+      /* บังคับ Kanit ใน Card */
+      .card,
+      .card h5,
+      .card p,
+      .card span,
+      .card div {
+        font-family: "Kanit", sans-serif !important;
+      }
+
+      /* --- แก้ Bug ไอคอนตีกัน --- */
+      .fa,
+      .fas,
+      .fab,
+      .bi,
+      [class*="fa-"],
+      [class*="bi-"] {
+        font-family: "Font Awesome 6 Free", "Bootstrap-icons" !important;
+        font-weight: 900 !important;
+      }
+
+      /* --- ปรับแต่งปุ่มและ Card --- */
+      .btn-responsive {
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+      }
+
+      @media (min-width: 992px) {
+        .btn-responsive {
+          font-size: 18px !important;
+          padding: 12px 25px !important;
+        }
+      }
+
+      .card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      /* ปรับแต่ง Popup ให้ตัวหนังสือสวย */
+      .swal2-title {
+        font-family: "Kanit", sans-serif !important;
+        font-size: 1.5rem !important; /* ปรับขนาดหัวข้อให้พอดีมือถือ */
+      }
+      .swal2-html-container {
+        font-family: "Sarabun", sans-serif !important;
+      }
+      /* ปรับแต่งปุ่มใน Popup ให้สวยขึ้น */
+      .swal2-confirm,
+      .swal2-cancel {
+        font-family: "Kanit", sans-serif !important;
+        border-radius: 50px !important; /* ปุ่มกลมมน */
+      }
+    </style>
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#page-top" 
+          ><img src="logoooo.png" style="height: 80px; min-width: 170px; alt="...
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#หน้าแรก">หน้าแรก</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#เกี่ยวกับหลักสูตร"
+                >เกี่ยวกับหลักสูตร</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#อาจารย์">อาจารย์</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ผลงานนักศึกษา">ผลงานนักศึกษา</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#อาชีพ">อาชีพ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<header class="masthead" style="
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1557683316-973673baf926');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+"><img src="logo2.jpg" class="img-fluid" alt="Header Image">
+  <div class="container">
+    <div class="masthead-subheading" style="font-size: 1.5rem; margin-bottom: 1rem;">Welcome To Our Studio!</div>
+    <div class="masthead-heading text-uppercase" style="font-size: 3.5rem; font-weight: 700; margin-bottom: 2rem;">It's Nice To Meet You</div>
+    <a class="btn btn-primary btn-xl text-uppercase" href="#หน้าแรก" style="background-color: #6f42c1; border: none; padding: 1rem 2.5rem; border-radius: 5px;">
+      Tell Me More
+    </a>
+  </div>
+</header>
+
+
+    <section class="page-section" id="หน้าแรก">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">หน้าแรก</h2>
+          <h3 class="section-subheading text-muted">
+            Lorem ipsum dolor sit amet consectetur.
+          </h3>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="my-3">E-Commerce</h4>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              maxime quam architecto quo inventore harum ex magni, dicta
+              impedit.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="my-3">Responsive Design</h4>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              maxime quam architecto quo inventore harum ex magni, dicta
+              impedit.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="my-3">Web Security</h4>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+              maxime quam architecto quo inventore harum ex magni, dicta
+              impedit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section bg-light" id="เกี่ยวกับหลักสูตร">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">เกี่ยวกับหลักสูตร</h2>
+          <h3 class="section-subheading text-muted">
+            คณะวิทยาศาสตร์และเทคโนโลยี<br />สาขาวิทยาการคอมพิวเตอร์
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="อาจารย์">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">อาจารย์</h2>
+          <h3 class="section-subheading text-muted">
+            คณาจารย์ประจำสาขาวิทยาการคอมพิวเตอร์
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="T.tira.jpg" alt="..." />
+              <h4>ผศ.ณัฏฐิรา ศุขไพบูลย์</h4>
+              <p class="text-muted">nattila@vru.ac.th</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="T.nut.jpg" alt="..." />
+              <h4>อ.ณัฐรดี อนุพงค์</h4>
+              <p class="text-muted">natradee@vru.ac.th</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img
+                class="mx-auto rounded-circle"
+                src="T.wisarut.jpg"
+                alt="..."
+              />
+              <h4>ผศ.ดร.วิศรุต ขวัญคุ้ม</h4>
+              <p class="text-muted">wisrut@vru.ac.th</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="T.nuttt.jpg" alt="..." />
+              <h4>อ.ดร.ดาวรถา วีระพันธ์</h4>
+              <p class="text-muted">daorathar@vru.ac.th</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img
+                class="mx-auto rounded-circle"
+                src="T.archai.jpg"
+                alt="..."
+              />
+              <h4>อ.ชวลิต โควีระวงศ์</h4>
+              <p class="text-muted">chavalit@vru.ac.th</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="team-member">
+              <img
+                class="mx-auto rounded-circle"
+                src="T.pranom.jpg"
+                alt="..."
+              />
+              <h4>อ.ดร.ประณมกร อัมพรพรรดิ์</h4>
+              <p class="text-muted">pranomkorn@vru.ac.th</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section bg-light" id="ผลงานนักศึกษา">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">ผลงานนักศึกษา</h2>
+          <h3 class="section-subheading text-muted">
+            Lorem ipsum dolor sit amet consectetur.
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="อาชีพ">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-heading text-uppercase text-dark">
+            จบไปทำอะไรได้บ้าง?
+          </h2>
+          <h3 class="section-subheading text-muted">
+            เส้นทางอาชีพสุดรุ่งของชาววิทย์-คอม VRU
+          </h3>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+            >
+              <div
+                class="icon-box mb-3 mx-auto bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px"
+              >
+                <i class="fas fa-code fa-2x"></i>
+              </div>
+              <h5 class="card-title fw-bold">Software Dev</h5>
+              <p class="card-text text-muted small">
+                นักพัฒนาซอฟต์แวร์ เขียนโค้ดสร้างแอปพลิเคชัน เว็บไซต์<br />
+                และระบบเจ๋งๆ ที่เปลี่ยนโลก
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+            >
+              <div
+                class="icon-box mb-3 mx-auto bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px"
+              >
+                <i class="fas fa-chart-pie fa-2x"></i>
+              </div>
+              <h5 class="card-title fw-bold">Data Scientist</h5>
+              <p class="card-text text-muted small">
+                นักวิทยาศาสตร์ข้อมูล <br />เปลี่ยนข้อมูลมหาศาลให้เป็นทองคำ
+                วิเคราะห์เทรนด์และทำนายอนาคต
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+            >
+              <div
+                class="icon-box mb-3 mx-auto bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px"
+              >
+                <i class="fas fa-network-wired fa-2x"></i>
+              </div>
+              <h5 class="card-title fw-bold">Network & IoT</h5>
+              <p class="card-text text-muted small">
+                ดูแลระบบเครือข่ายและความปลอดภัย เชื่อมต่ออุปกรณ์อัจฉริยะ <br />
+                เข้าสู่โลกอินเทอร์เน็ต
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+            >
+              <div
+                class="icon-box mb-3 mx-auto bg-danger bg-opacity-10 text-danger rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 80px; height: 80px"
+              >
+                <i class="fas fa-pen-nib fa-2x"></i>
+              </div>
+              <h5 class="card-title fw-bold">UX/UI Designer</h5>
+              <p class="card-text text-muted small">
+                นักออกแบบประสบการณ์ผู้ใช้งาน
+                <br />ผสมผสานศิลปะและเทคโนโลยีให้แอปฯ ใช้งานง่ายและสวยงาม
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py-4 bg-secondary bg-opacity-15">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-3 text-lg-start">
+            Copyright &copy; Computer Science VRU 2024
+          </div>
+          <div class="col-lg-6 my-3 my-lg-0 text-center">
+            <a
+              class="btn btn-social mx-1 text-white"
+              href="https://web.facebook.com/ValayaAlongkornRajabhat"
+              style="background-color: #1877f2; border: none"
+            >
+              <i class="fab fa-fw fa-facebook-f"></i>
+            </a>
+
+            <a
+              class="btn btn-social mx-1 text-white"
+              href="https://www.youtube.com/channel/UCvVYrcvyZk9nK8vBSC12khw"
+              style="background-color: #ff0000; border: none"
+            >
+              <i class="fab fa-fw fa-youtube"></i>
+            </a>
+
+            <a
+              class="btn btn-social mx-1 text-white"
+              href="https://x.com/VruValaya"
+              style="background-color: #000000; border: none"
+            >
+              <i class="fab fa-fw fa-twitter"></i>
+            </a>
+
+            <a
+              class="btn btn-social mx-1 text-white"
+              href="https://www.instagram.com/vru_valaya/"
+              style="
+                background: linear-gradient(
+                  45deg,
+                  #405de6,
+                  #5851db,
+                  #833ab4,
+                  #c13584,
+                  #e1306c,
+                  #fd1d1d
+                );
+                border: none;
+              "
+            >
+              <i class="fab fa-fw fa-instagram"></i>
+            </a>
+
+            <a
+              class="btn btn-social mx-1 text-white"
+              href="https://www.tiktok.com/@vru_valaya?lang=th-TH"
+              style="
+                background-color: #000000;
+                border: none;
+                text-shadow:
+                  2px 2px 0px rgba(255, 0, 80, 0.4),
+                  -2px -2px 0px rgba(0, 242, 234, 0.4);
+              "
+            >
+              <i class="fab fa-fw fa-tiktok"></i>
+            </a>
+
+            <a
+              class="btn btn-social mx-1 text-white"
+              href="https://line.me/ti/g2/Fyp3th3jk0he3ZA3PtrbJGE4ygqHfY7yQp3HjA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+              style="background-color: #06c755; border: none"
+            >
+              <i class="fab fa-fw fa-line"></i>
+            </a>
+          </div>
+          <div class="col-lg-3 text-lg-end">
+            <a class="link-dark text-decoration-none me-3" href="#!"
+              >Privacy Policy</a
+            >
+            <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        
+        const isMobile = window.innerWidth < 768; 
+
+        Swal.fire({
+          title: "ยินดีต้อนรับสู่ CS VRU!",
+          html: `
+                <h4 class="text-primary mt-3">เปิดรับสมัครนักศึกษาใหม่ 2567!</h4>
+                <p class="mb-4 small">มาร่วมเป็นส่วนหนึ่งของครอบครัววิทยาการคอมพิวเตอร์</p>
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" 
+                     class="img-fluid rounded mb-3" 
+                     style="width: 100%; height: auto; max-height: ${isMobile ? "200px" : "400px"}; object-fit: cover;">
+                <p class="small text-muted">กดปุ่มด้านล่างเพื่อดูรายละเอียด</p>
+            `,
+          
+          width: isMobile ? "95%" : "60%",
+          padding: isMobile ? "1em" : "2em",
+          showCloseButton: true,
+          showCancelButton: true,
+          focusConfirm: false,
+          confirmButtonText:
+            '<i class="bi bi-pencil-square"></i> สมัครเรียนทันที',
+          confirmButtonColor: "#ffc107",
+          cancelButtonText: "เข้าสู่เว็บไซต์",
+          cancelButtonColor: "#6c757d",
+          customClass: {
+            confirmButton: isMobile ? "w-100 mb-2" : "",
+            cancelButton: isMobile ? "w-100" : "",
+          },
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "https://ent.vru.ac.th/";
+          }
+        });
+      });
+    </script>
+    <div
+      class="position-fixed bottom-0 end-0 m-3 m-md-4 d-flex flex-column gap-2 align-items-end"
+      style="z-index: 1000"
+    >
+      <a
+        href="#"
+        class="btn btn-success rounded-pill shadow-lg text-white d-flex align-items-center justify-content-center"
+        style="height: 50px; min-width: 50px"
+      >
+        <i class="bi bi-chat-dots-fill fs-4"></i>
+        <span class="d-none d-md-inline ms-2">OpenChat</span>
+      </a>
+
+      <a
+        href="https://ent.vru.ac.th/"
+        class="btn btn-warning rounded-pill shadow-lg d-flex align-items-center justify-content-center"
+        style="height: 50px; min-width: 50px; background-color: #b90086; border: none"
+      >
+        <i class="bi bi-chat-text-fill fs-4"></i>
+        <span class="d-none d-md-inline ms-2">สมัครเรียน</span>
+      </a>
+    </div>
+  </body>
+</html>
