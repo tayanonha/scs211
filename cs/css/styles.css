@@ -11044,3 +11044,31 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+/* =========================================
+   CUSTOM FONTS - เพิ่มเติมสำหรับภาษาไทย
+   ========================================= */
+
+/* 1. บังคับเนื้อหาทั่วไป (Body) ให้ใช้ฟอนต์ Sarabun (มีหัว อ่านง่าย) */
+body, p, .lead, li, div, span, a, td {
+  font-family: 'Sarabun', sans-serif !important;
+}
+
+/* 2. บังคับหัวข้อ (Heading), เมนู, และปุ่ม ให้ใช้ฟอนต์ Kanit (ไม่มีหัว ทันสมัย) */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.navbar-brand, 
+.nav-link, 
+.btn, 
+th, 
+label, 
+.page-section-heading,
+.text-uppercase {
+  font-family: 'Kanit', sans-serif !important;
+  font-weight: 500 !important; /* ปรับความหนา */
+}
+
+/* 3. ยกเว้นไอคอน (สำคัญมาก! ไม่งั้นไอคอนจะกลายเป็นสี่เหลี่ยม) */
+.fa, .fas, .fab, .bi, [class*="fa-"], [class*="bi-"] {
+  font-family: "Font Awesome 6 Free", "Bootstrap-icons" !important;
+  font-weight: 900 !important;
+}
